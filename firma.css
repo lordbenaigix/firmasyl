@@ -46,9 +46,6 @@ firma::before {
             text-shadow: 0 0 3px #000, 0 0 5px #3a3a3a;
             opacity: 0;
             transition: opacity 0.5s ease;
- background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para legibilidad */
-    padding: 5px; /* Espaciado interno para el texto */
-    border-radius: 5px; /* Opcional: bordes redondeados */
         }
 
 .imagen.izquierda:hover .imagen-texto,
