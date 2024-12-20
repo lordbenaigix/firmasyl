@@ -33,10 +33,6 @@ firma::before {
             filter: grayscale(100%);
         }
 
-.imagen.derecha {
-            right: 0;
-        }
-
 .imagen-texto {
             position: absolute;
             bottom: 10px;
