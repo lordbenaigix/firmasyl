@@ -48,6 +48,14 @@ firma::before {
             transition: opacity 0.5s ease;
         }
 
+.imagen.izquierda {
+            left: 0;
+        }
+
+.imagen.derecha {
+            right: 0;  
+        }
+
 .imagen.izquierda:hover .imagen-texto,
 .imagen.derecha:hover .imagen-texto {
             opacity: 1;
