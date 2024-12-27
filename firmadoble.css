@@ -1,0 +1,83 @@
+.firma {
+            position: relative;
+            width: 300px;
+            height: 150px;
+            overflow: hidden;
+            border: 4px solid #3a3a3a;
+            border-radius: 10px;
+            background: linear-gradient(145deg, #1a1a1a, #292929);
+            box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.8), inset 0 0 5px rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+        }
+
+firma::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            pointer-events: none;
+            border-radius: 10px;
+        }
+
+.imagen {
+            position: absolute;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            transition: transform 1s ease;
+            background-size: cover;
+            background-position: center;
+            filter: grayscale(100%);
+        }
+
+.imagen-texto {
+            position: absolute;
+   text-align: center;
+            bottom: 10px;
+            width: 80%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #ffffff;
+            font-size: 1rem;
+            font-style: italic;
+            text-shadow: 0 0 3px #000, 0 0 5px #000000;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
+.imagen.izquierda:hover .imagen-texto,
+.imagen.derecha:hover .imagen-texto {
+            opacity: 1;
+        }
+
+.fondo-revelado {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            color: #e1e1e1;
+            font-size: 1.5rem;
+            font-style: italic;
+            text-shadow: 0 0 5px #000, 0 0 10px #000000;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+.firma:hover .imagen.izquierda {
+            transform: translateX(-100%);
+        }
+.firma:hover .imagen.derecha {
+            transform: translateX(100%);
+        }
+.firma:hover .fondo-revelado {
+            opacity: 1;
+        }
